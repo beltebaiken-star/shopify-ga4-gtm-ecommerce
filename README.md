@@ -1,62 +1,77 @@
 # GA4 + GTM + Shopify Ecommerce Tracking
 
-> Upwork portfolio demo / sanitized technical case study.
+> **A clean ecommerce event contract for GA4/GTM with sequence and payload validation.**
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-Sanitized%20Demo-2ea44f)](https://github.com/beltebaiken-star/shopify-ga4-gtm-ecommerce)
+[![Run](https://img.shields.io/badge/Quick%20Check-npm%20test-blue)](https://github.com/beltebaiken-star/shopify-ga4-gtm-ecommerce)
+[![Upwork](https://img.shields.io/badge/Available%20on-Upwork-14a800)](https://www.upwork.com/freelancers/baikenbelte)
 
 ## Client problem
 
-A structured GA4/GTM ecommerce implementation showing clean dataLayer events, item arrays, purchase payloads, debugging and reporting readiness.
+Analytics setups become unreliable when theme code, apps and GTM all emit overlapping or inconsistent ecommerce events.
 
-## What this repository demonstrates
+## What this project proves
 
-- GA4 ecommerce event schema
-- GTM trigger/tag mapping
-- Shopify dataLayer examples
-- DebugView/Tag Assistant QA
-- Purchase and revenue consistency validation
-
-## Tech stack
-
-GA4, GTM, Shopify, dataLayer, ecommerce events
+This project demonstrates a single normalized event model for view_item, add_to_cart, begin_checkout and purchase, plus a runnable test of event order and required ecommerce payload fields.
 
 ## Architecture
 
-This repository is intentionally structured as a public portfolio implementation rather than a copy of private client code. Production credentials, customer data, private URLs and proprietary business logic are excluded.
-
-```text
-Input / Store / Platform Event
-        ↓
-Validation & Normalization
-        ↓
-Business / Tracking / Integration Logic
-        ↓
-External API or Storefront
-        ↓
-QA, Logs, Reconciliation
+```mermaid
+flowchart LR
+  A[Shopify customer action] --> B[Normalized dataLayer]
+  B --> C[GTM triggers / variables]
+  C --> D[GA4 ecommerce events]
+  D --> E[DebugView]
+  E --> F[Reports / attribution]
+  F --> G[Revenue reconciliation]
 ```
 
-## What an Upwork client can verify here
+## Quick start
 
-- Clear separation between configuration, business logic and external API calls
-- Error handling and production-readiness thinking
-- Practical ecommerce use cases rather than toy examples
-- Documentation that explains both implementation and validation
-- Security-conscious handling of credentials and customer data
+```bash
+git clone https://github.com/beltebaiken-star/shopify-ga4-gtm-ecommerce.git
+cd shopify-ga4-gtm-ecommerce
+npm test
+```
 
-## Suggested demo contents
+**What the demo checks:** Validates the ecommerce funnel sequence and ensures currency, item arrays and purchase transaction ID are present.
 
-- `src/` — sanitized implementation examples
-- `examples/` — sample payloads using synthetic data
-- `tests/` — validation / QA examples
-- `docs/architecture.md` — architecture and flow
-- `docs/qa-checklist.md` — production verification steps
-- `screenshots/` — portfolio diagrams and UI/results images
+No external credentials or paid services are required for this demo.
 
-## Source portfolio reference
+## What I would deliver on a client project
 
-Internal source project: **23 - GA4 + GTM + Shopify Ecommerce Tracking**
+- GA4/GTM implementation audit
+- dataLayer event contract
+- GTM tags/triggers/variables mapping
+- DebugView QA
+- Funnel event validation
+- Purchase/revenue reconciliation checklist
 
-Only reusable patterns and sanitized demo material should be published publicly.
+## Production QA principles
 
-## Hiring fit
+- Diagnose the failing layer before changing production code.
+- Keep identifiers, values and platform mappings consistent end-to-end.
+- Test both success and failure paths.
+- Check for duplicates, missing events/data, and stale configuration.
+- Reconcile platform output against Shopify/store source-of-truth data.
+- Document the fix and leave a repeatable verification checklist.
 
-Good match for Upwork projects involving **GA4 + GTM + Shopify Ecommerce Tracking**, Shopify troubleshooting, ecommerce integrations, tracking reliability, API automation, or production-readiness reviews.
+## Repository map
+
+```text
+demo/                 runnable synthetic validation
+examples/             safe sample payloads / implementation snippets
+docs/architecture.md  technical architecture notes
+docs/qa-checklist.md  production verification checklist
+README.md              client-facing case study
+```
+
+## Security & portfolio note
+
+This repository is a **sanitized technical portfolio demo**. It intentionally excludes customer data, production credentials, private URLs, access tokens and proprietary client code.
+
+## Hire / contact
+
+I take on focused Shopify, ecommerce tracking, analytics, GMC and integration projects.
+
+**Upwork:** https://www.upwork.com/freelancers/baikenbelte
