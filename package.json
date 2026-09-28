@@ -1,0 +1,8 @@
+{
+  "name": "shopify-ga4-gtm-ecommerce-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node demo/validate-events.mjs"
+  }
+}
