@@ -3,7 +3,7 @@
 > **A clean ecommerce event contract for GA4/GTM with sequence and payload validation.**
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Sanitized%20Demo-2ea44f)](https://github.com/beltebaiken-star/shopify-ga4-gtm-ecommerce)
-[![Run](https://img.shields.io/badge/Quick%20Check-npm%20test-blue)](https://github.com/beltebaiken-star/shopify-ga4-gtm-ecommerce)
+[![Demo Check](https://github.com/beltebaiken-star/shopify-ga4-gtm-ecommerce/actions/workflows/demo-check.yml/badge.svg)](https://github.com/beltebaiken-star/shopify-ga4-gtm-ecommerce/actions/workflows/demo-check.yml)
 [![Upwork](https://img.shields.io/badge/Available%20on-Upwork-14a800)](https://www.upwork.com/freelancers/baikenbelte)
 
 ## Client problem
