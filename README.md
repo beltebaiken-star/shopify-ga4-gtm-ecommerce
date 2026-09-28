@@ -14,6 +14,12 @@ Analytics setups become unreliable when theme code, apps and GTM all emit overla
 
 This project demonstrates a single normalized event model for view_item, add_to_cart, begin_checkout and purchase, plus a runnable test of event order and required ecommerce payload fields.
 
+## Visual proof
+
+The visual below summarizes the **client problem, architecture, validation logic, and delivery outcomes** for this sanitized technical case study.
+
+![GA4 + GTM + Shopify Ecommerce Tracking visual proof](./screenshots/visual-proof-overview.png)
+
 ## Architecture
 
 ```mermaid
